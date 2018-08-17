@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Array</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+        }
+        h1{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        #1st-div{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        #2nd-div{
+            background-color: orange;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h2>JS Array Example</h2>
+        <div id="1st-div">
+            <h1 id="display1"></h1>
+        </div>
+        <div id="2nd-div">
+            <h1 id="display2"></h1>
+        </div>
+</body>
+
+<script>
+
+    // creation of arrays
+    var myArray = [10, 20, 30, 40, 50];
+
+    // Accessing an array and its properties
+    var output = myArray.join();
+    console.log(output);
+    document.getElementById('display1').innerHTML = output;
+
+    var theTenValue = myArray[0];
+    console.log("theTenValue " + theTenValue);
+
+    // Access not existed property from an array
+
+
+    // adding properties to an array
+    myArray = [10, 20, 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray[5]= 60;
+    document.getElementById('display2').innerHTML=myArray.join();
+
+    // Accessing length of an Array
+    var arrlength = myArray.length;
+    console.log(arrlength);
+
+    // reverse the array using reverse()
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.reverse();
+    document.getElementById('display2').innerHTML=myArray.join();
+
+    // Remove the first value of the array: shift()
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.shift();
+    document.getElementById('display2').innerHTML=myArray.join();
+
+    // Add value to front of the array:unshift()
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.unshift(80);
+    //myArray.unshift(80, 90, 100);
+    document.getElementById('display2').innerHTML=myArray.join();
+
+    // Remove the last value of the array: pop()
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.pop();
+    document.getElementById('display2').innerHTML=myArray.join();
+
+    // Add value the end of the array: push()
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.push(80);
+    //myArray.push(80, 90, 100);
+    document.getElementById('display2').innerHTML=myArray.join();
+
+
+    // Remove an element from an Array , Arguments: colors.splice(pos,n):
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    myArray.splice(2, 1);  // 30
+    document.getElementById('display2').innerHTML=myArray.join();
+
+
+    // Create a copy of an array. Typically assigned to a new variable:slice();
+    myArray = [10, 20 , 30, 40, 50];
+    document.getElementById('display1').innerHTML=myArray.join();
+
+    var myArray2= myArray.slice();
+    document.getElementById('display2').innerHTML=myArray2.join();
+
+    if(myArray == myArray2){
+        output= "Both Are Equal";
+    }
+    else {
+        output= "Both Are Not Equal";
+    }
+
+    console.log(output);
+
+    // Return the first element that matches the search parameter
+    // after the specified index position. Defaults to index position 0. Arguments: colors.indexOf(search, index):
+    // var result = colors.indexOf(search, index);
+    // console.log("The search result index is: ", result);
+
+    myArray = [10, 20, 30, 40, 50];
+    output = "The index of 40 is: "+ myArray.indexOf(40);
+    console.log(output);
+    document.getElementById('display1').innerHTML=output;
+
+    // Return the items in an array as a comma separated string. The separator argument can be used to change the comma to something else. Arguments: colors.join(separator):
+    // var arrayString = colors.join(separator);
+    // console.log("String from array: ", arrayString);
+
+    myArray = [10, 20, 30, 40, 50];
+    output = myArray.join(" * ");
+    console.log(typeof output);
+    document.getElementById('display2').innerHTML=output;
+
+    // Prove an array is an Object
+    myArray = [10, 20, 30, 40, 50];
+    console.log(myArray);
+    console.log(myArray["1"]);
+    myArray["5"] = 60;
+    console.log(myArray['5']);
+
+    myArray["name"]="Amit";
+    console.log(myArray);
+
+    // MDN documentation for Array:
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+
+</script>
+</html>

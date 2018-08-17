@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Conditional Statements</title>
+    <style>
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>JS Conditional Statement Example</h2>
+    <div>
+        <h1 id="display"></h1>
+    </div>
+
+</body>
+
+<script>
+
+    // If condition Example
+    var courseCompleted=true;
+    var practiceComplted=false;
+    output="";
+    if(courseCompleted && practiceComplted){
+        output="You Will Get The Job Soon"
+    }
+    else if(courseCompleted && !practiceComplted){
+        output = "Please join any Course";
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+
+    // For loop Example
+    output="";
+    for(var i=1; i<=10; i++){
+        output += i + " ";
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // While loop Example
+    output="";
+    var i=1;
+    while (i <= 10){
+        output += i + " - ";
+        i++;    // mandetory
+    }
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // Do while loop Example
+    output="";
+    var i=1;
+    do{
+        output += i + " * ";
+        i++;    // mandetory
+    }
+    while (i <= 10);
+    console.log(output);
+    document.getElementById('display').innerHTML = output;
+
+    // Switch Statement Example
+    output="";
+    var today = new Date().getDay();
+    console.log(output);
+    switch (today){
+        case 0:
+            output="Sunday";
+            break;
+        case 1:
+            output="Monday";
+            break;
+        case 2:
+            output="Tewsday";
+            break;
+        case 3:
+            output="Wednessday";
+            break;
+        case 4:
+            output="Thursday";
+            break;
+        case 5:
+            output="Friday";
+            break;
+        case 6:
+            output="Saturday";
+            break;
+        default:
+            output="Dont Know";
+            break;
+    }
+
+
+    document.getElementById('display').innerHTML = "Today Is: "+ output;
+
+</script>
+</html>

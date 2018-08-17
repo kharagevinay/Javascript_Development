@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Math Date Objects</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        #math-div{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        #date-div{
+            background-color: olivedrab;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        #india-time{
+            background-color: orange;
+            color: white;
+            text-align: center;
+            width: 500px;
+            padding: 15px;
+            margin-top: 20px;
+            float: left;
+        }
+        #us-time{
+            background-color: darkblue;
+            color: white;
+            text-align: center;
+            width: 500px;
+            padding: 15px;
+            margin-top: 20px;
+            float: right;
+        }
+    </style>
+</head>
+<body>
+            <h2>JS Math Examples</h2>
+            <div id="math-div">
+                <h1 id="math"></h1>
+            </div>
+
+            <h2>JS Date Examples</h2>
+            <div id="date-div">
+                <h1 id="date"></h1>
+            </div>
+
+            <div id="india-time">
+                <h3>India Time</h3>
+                <h1 id="india">10:00 AM</h1>
+            </div>
+
+            <div id="us-time">
+                <h3>USA Time</h3>
+                <h1 id="us">10:00 AM</h1>
+            </div>
+</body>
+
+<script>
+    /*
+        Math Object Examples
+
+     */
+
+    // Math PI and Sqrt
+    var piValue = Math.PI;
+    var output = "The pi value is: " + piValue;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+    //Sqrt of 16
+    var sqrt16 = Math.sqrt(16);
+    var output = "The Sqrt of 16 is: " + sqrt16;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+    // find the min of 4 numbers
+    var min = Math.min(10, 456, 1002, 5);
+    var output = "The minimum number is: " + min;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+    // find the Max of 4 numbers
+    var max = Math.max(10, 456, 1002, 5);
+    var output = "The maximum number is: " + max;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+    // find the 'x' to the power of 'y' value, ex: 2^4
+    var twopowerfour = Math.pow(2, 4);
+    var output = "The 2 Power Four Is: " + twopowerfour;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+
+    // generate the random numbers from 0 to 100
+    var randomnumbers = Math.round(Math.random() * 100) ;
+    var output = "The Random Number is: " + randomnumbers;
+    console.log(output);
+    document.getElementById('math').innerHTML=output;
+
+    /* For more details about Math Object, please have a look at
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math
+    */
+
+    /*
+        Date Object Examples
+
+     */
+
+    // get today's date
+    var today = new Date();
+    console.log(today);
+    document.getElementById('date').innerHTML=today + " ";
+
+    //get date of the month 0 - 31 getDate()
+    var date = today.getDate() + "/" + (today.getMonth()+1) + "/" + today.getFullYear();
+    console.log(date);
+    document.getElementById('date').innerHTML=date + " ";
+
+    //get day of the week 0 - 6 getDay()
+
+    // get full day of the week using switch statement
+    var day = today.getDay();
+    output = "";
+    switch(day){
+        case 0:
+            output = "Sunday";
+            break;
+        case 1:
+            output = "Monday";
+            break;
+        case 2:
+            output = "Tewsday";
+            break;
+        case 3:
+            output = "Wednessday";
+            break;
+        case 4:
+            output = "Thursday";
+            break;
+        case 5:
+            output = "Friday";
+            break;
+        case 6:
+            output = "Saturday";
+            break;
+        default:
+            output = "Dont Know";
+            break;
+    }
+    console.log("Today is " + output);
+    document.getElementById('date').innerHTML=output;
+
+    /* For More Details about Date() please have a look at
+        https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
+    */
+
+    function indiantime() {
+        var today = new Date();
+        var options = {
+            timeZone : 'Asia/Kolkata'
+        };
+        document.getElementById('india').innerHTML = today.toLocaleTimeString('en-US', options);
+    }
+
+    indiantime();
+    setInterval(indiantime, 1000);
+
+
+    function ustime() {
+        var today = new Date();
+        var options = {
+            timeZone : 'America/New_York'
+        };
+        document.getElementById('us').innerHTML = today.toLocaleTimeString('en-US', options);
+    }
+
+    ustime();
+    setInterval(ustime, 1000);
+
+</script>
+</html>

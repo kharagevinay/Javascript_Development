@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Objects</title>
+    <style>
+        body{
+            font-family: "Comic Sans MS", sans-serif;
+            margin: 0;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 5px;
+        }
+        div{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+        <h2>JS Object Example</h2>
+        <div>
+            <h1 id="display"></h1>
+        </div>
+
+</body>
+
+<script>
+
+    //creation of objects
+    var obj={};
+    console.log(obj);
+
+    //Adding properties to objects
+    var emp={};
+    emp.name='John';
+    emp.age=40;
+    emp.designation='Manager';
+    console.log(emp);
+
+    //Retrieving properties of objects
+    var empName='Amit';
+    var output= "The Employee Name Is: "+empName;
+    console.log(empName);
+    document.getElementById('display').innerHTML=output;
+
+    //declaring Object Literals
+    var employee={
+        name : 'Smith',
+        age : 40,
+        designation : 'Business Analyst'
+    };
+    console.log(employee);
+
+    //Access existing properties
+    var empDesignation=employee.designation;
+    output = "Employee Designation Is: "+ empDesignation;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    //Access Non Existing Properties
+    var empSalary=employee.salary;
+    output = "Employee Salary Is: "+ empSalary;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // Usage of Dot and [] notations
+    var empDesignation = employee['designation'];
+    output = "Employee Designation Is: "+ empDesignation;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // use of [] notation where dot is not used for invalid identifiers
+    var student = {
+        name : 'Rajan',
+        10 : 'Engineering'
+    }
+
+    var studentDept = student["10"];
+    console.log(studentDept);
+
+    // use of [] notation for accessing dynamic properties
+    var student={
+        name : 'Rajan',
+        age : 25,
+        course : 'Medical'
+    }
+
+    var dynamicprop = "name";
+    output = "The Dynamic Property Is: " + student[dynamicprop];
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // nested Objects creation
+    var student = {
+      name : 'Mahesh',
+      age : 45,
+      course : 'Java',
+        address :{
+          city : 'Hyderabad',
+            state : 'Telengana',
+            country : 'India'
+        }
+    };
+
+    //Accessing them using dot notation
+    var maheshcity = student.address.city;
+    output="Mahesh living in: " + maheshcity;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    //Accessing them using mix of dot and [] notation
+    var maheshCountry = student.address["country"];
+    output = "Mahesh County Is: " + maheshCountry;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // Add some properties to nested object and access them
+    console.log(output);
+
+    student.address.street = "Ameerpet";
+
+    console.log(student);
+
+    // === operator demo for objects (if pointing to same location in memory)
+    var employee1={
+        name : 'Naveen',
+        designation : 'Tech Lead'
+    };
+
+    var employee2 = employee1;
+    if(employee1 === employee2){
+        output = "Both Are Equal"
+    }
+    else {
+        output = "Both Are Not Equal"
+    }
+
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+
+    /* revisiting undefined vs null for objects
+     if no property -> undefined
+     if exists and with value null -> null  */
+
+
+    // deleting a property from an object
+    console.log(student);
+    delete student.address.country;
+    console.log(student);
+
+
+</script>
+</html>

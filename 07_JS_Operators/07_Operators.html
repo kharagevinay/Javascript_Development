@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Operators</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h2>JS Operator Examples</h2>
+        <div>
+            <h1 id="display"></h1>
+        </div>
+</body>
+<script>
+
+    // Assignment operator =
+    var num1=10;
+    var output="The value Of num1 is: "+ num1;
+    document.getElementById('display').innerHTML=output;
+
+    // Arithmetic operators + - * /
+    var a=10;
+    var b=20;
+
+    var sum=a+b;
+    output="The Sum Of a and b is: "+sum;
+    document.getElementById('display').innerHTML=output;
+
+    var sub=a-b;
+    output="The Subtraction Of a and b is: "+sub;
+    document.getElementById('display').innerHTML=output;
+
+    var mul=a*b;
+    output="The Multiplication Of a and b is: "+mul;
+    document.getElementById('display').innerHTML=output;
+
+    var div=a/b;
+    output="The Division Of a and b is: "+div;
+    document.getElementById('display').innerHTML=output;
+
+    // Short hand math += , -= , *= , /=
+    var x=10;
+    var y=20;
+    var add=0;
+    add= add+(x+y); // long way
+    add += (x+y); //shortcut way
+    output="The Addition Value Is : "+add;
+    document.getElementById('display').innerHTML=output;
+
+    // Conditional operators < , > , <= , >= , !=
+    var age=25;
+    output="";
+    if(age<=30){
+        output="Get A Job";
+    }
+    else {
+        output="Get Marry";
+    }
+    document.getElementById('display').innerHTML=output;
+
+    // Unary Operator ++ , -- (pre , post)
+    var p=10;
+    p= p+1; //longest way
+    p += 1; //longer way
+    p++; //shortcut way
+    output="The value of p is: "+p;
+    document.getElementById('display').innerHTML=output;
+
+    // Logical operators AND , OR
+    var inRelation = true;
+    var parentsAgreed = false;
+    output="";
+    if(inRelation && parentsAgreed){
+        output="Get Marry Soon";
+    }
+    else {
+        output="Please wait until the parents convinced";
+    }
+    document.getElementById('display').innerHTML=output;
+
+    // String Concatenation Operator (+)
+    var name='John';
+    var age=40;
+    var designation='Developer';
+    output=name + age + designation;
+    document.getElementById('display').innerHTML=output;
+
+    // Ternary operator (? :)
+    var age=19;
+    output="";
+    (age < 18) ? output= "You Are Minor" : output = "You Are Major";
+    document.getElementById('display').innerHTML=output;
+
+    // Type of operator
+    var abc;
+    output="The Type Of abc is: " + typeof abc;
+    document.getElementById('display').innerHTML=output;
+
+    abc=10;
+    output="The Type Of abc is: " + typeof abc;
+    document.getElementById('display').innerHTML=output;
+
+    abc="Amit";
+    output="The Type Of abc is: " + typeof abc;
+    document.getElementById('display').innerHTML=output;
+
+    abc=true;
+    output="The Type Of abc is: " + typeof abc;
+    document.getElementById('display').innerHTML=output;
+
+    abc=null;
+    output="The Type Of abc is: " + typeof abc;
+    document.getElementById('display').innerHTML=output;
+
+    // Type coercion operator (automatic type conversion)
+
+
+    // == operator
+    var a=10;
+    var b="10";
+    if(a==b){
+        output="Both r equal";
+    }
+    else {
+        output="Both r not equal";
+    }
+    document.getElementById('display').innerHTML=output;
+
+    // === operator
+    var a=10;
+    var b="10";
+    if(a===b){
+        output="Both r equal";
+    }
+    else {
+        output="Both r not equal";
+    }
+    document.getElementById('display').innerHTML=output;
+
+
+
+</script>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>JS DataTypes</title>
+    <style>
+        body{
+            margin: 0;
+            font-family: "Comic Sans MS", sans-serif;
+        }
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+        <h2>JS Datatypes Example</h2>
+        <div>
+            <h1 id="display"></h1>
+        </div>
+
+</body>
+
+<script>
+
+    // number example
+    var a=10;
+    var output="The Datatype of a is : "+ typeof a;
+    document.getElementById('display').innerHTML=output;
+
+    // String Examples
+    var name="AMIT";
+    var output="The Datatype of name is : "+ typeof name;
+    document.getElementById('display').innerHTML=output;
+
+    // boolean Examples
+    var iseasy=true;
+    output = "Is JavaScript Is Easy ? " + iseasy;
+    document.getElementById('display').innerHTML=output;
+
+    // reassignment example of variables
+    var abc=10;
+    abc="Amit";
+    abc=true;
+    output="The Value Of abc is : "+ abc;
+    document.getElementById('display').innerHTML=output;
+
+    // Undefined Example
+    var ab;
+    output="The Value Of ab is : "+ ab;
+    document.getElementById('display').innerHTML=output;
+
+    // null example
+    var xyz=null;
+    output="The Value Of xyz is : "+ xyz;
+    document.getElementById('display').innerHTML=output;
+
+</script>
+
+</html>

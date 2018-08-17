@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Scopes</title>
+    <style>
+        h2{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+        div{
+            background-color: seagreen;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+        <h2>JS Scopes Example</h2>
+        <div>
+            <h1 id="display"></h1>
+        </div>
+</body>
+
+<script>
+
+    // Scopes introduction
+    /*for(var i=0; i<=10; i++){
+
+    }
+    var output = "The value of i is: "+i;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // Block scoping for FOR loop
+    var name = "Naveen";
+    if(name === "Naveen") {
+        var dept = "Engineering";
+    }
+    output = "Name is: "+name;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    output = "Department is: "+dept;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;*/
+
+    //Block scoping for if Block
+
+
+    // Function Scoping
+    var myName="John";
+    function allocateDepartment() {
+        if(myName === "John"){
+            var dept1 = "Engineering";
+        }
+    }
+    allocateDepartment();
+    output = "John's Dept is: "+dept1;
+    console.log(output);
+    document.getElementById('display').innerHTML=output;
+
+    // coding exercises
+
+    // 1) output ?    Ans : No output because u have to call the function
+
+    var top = 20;
+    function something() {
+        var inner = 30;
+        console.log(inner);
+    }
+
+    // 2) output ? Ans:
+    var top = 20;
+    function something() {
+        var inner = 30;
+        console.log(inner);
+    }
+    something();
+
+    // 3) output ?      Ans : 30
+    var top = 20;
+    var inner = 50;
+    function something() {
+        var inner = 30;
+        console.log(inner);
+    }
+    something();
+
+    // 4) output ?      Ans : 50
+
+    var top = 20;
+    var inner = 50;
+    function something() {
+        var inner = 30;
+    }
+    something();
+    console.log(inner);
+
+    // 5) output ?      Ans : Hello John
+    var name = "Naveen";
+    function greet(name) {
+        console.log("Hello " + name);
+    }
+
+    greet("John");
+
+    //  IIFE example        Immediately Invoked Function Example
+    (function () {
+        var a=10;
+        var b=20;
+        var sum=a+b;
+        console.log(sum);
+        document.getElementById('display').innerHTML="a + b is: "+sum;
+    })();
+
+    // Read and Write Operations for variables
+
+
+    // Read and Write Operations for Functions
+
+
+    // Implications of Read and Write Operations
+
+
+
+
+
+
+</script>
+</html>

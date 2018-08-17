@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation</title>
+    <style>
+        h2{
+            background-color: seagreen;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+        div{
+            background-color: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h2>DOM Manipulation</h2>
+        <div>
+            <h1 id="display"></h1>
+        </div>
+</body>
+<script>
+
+    //BOM Operations
+
+    // width of the browser
+    var widthofBrowser = window.innerWidth;
+    var output = "The width of the browser is: " + widthofBrowser + "px";
+    document.getElementById('display').innerHTML= output;
+
+    // width of the browser
+    var heightofBrowser = window.innerHeight;
+    var output = "The height of the browser is: " + heightofBrowser + "px";
+    document.getElementById('display').innerHTML= output;
+
+    // Open a new Tab
+    //window.open();
+
+
+    // DOM Properties to get body , title , URL
+    var bodyelements = document.body;
+    console.log(bodyelements);
+
+    var title = document.title;
+    output = "The title of document is: " + title;
+    console.log(output);
+    document.getElementById('display').innerHTML= output;
+
+    var url = document.URL;
+    output = "The url of document is: " + url;
+    console.log(output);
+    document.getElementById('display').innerHTML= output;
+
+    //DOM Methods
+    //document.getElementById();
+    //document.getElementsByClassName();
+    //document.getElementsByTagName();
+    //document.querySelector();
+    //document.querySelectorAll();
+
+    /* Goto w3schools.com and execute in console
+
+    document.querySelector('.w3-right').innerHTML = "<h1>UIBRAINS IS THE LARGEST DEVELOPER WEBSITE</h1>";
+
+    document.querySelector('.intro').innerHTML = "<h1>Hacked By Amit</h1>"; */
+
+    // Access and Change the Elements
+
+    // DOM Events
+
+
+
+
+</script>
+</html>
